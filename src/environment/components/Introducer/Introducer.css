@@ -23,6 +23,10 @@
     letter-spacing: 0.33rem;
 }
 
+.Introducer .hero-button {
+    margin-top: 4rem !important;
+}
+
 .Introducer .hidden {
     text-transform: uppercase;
 }

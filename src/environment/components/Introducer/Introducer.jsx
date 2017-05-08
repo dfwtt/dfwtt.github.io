@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Segment, Button } from 'semantic-ui-react';
+import { Segment, Image, Header, Button } from 'semantic-ui-react';
 import './Introducer.css';
 
 export default class Introducer extends Component {
@@ -15,17 +15,17 @@ export default class Introducer extends Component {
             <div className='Introducer'>
                 <Segment
                     compact
-                    secondary
-                    padded
-                    textAlign='center'>
-                    <h1>{fullName}</h1>
-                    <h2>{jobTitle}</h2>
+                    padded>
+                    <Image
+                        size='large'
+                        src='/images/dfwtt.gif' />
+                    <Header
+                        as='h1'
+                        textAlign='center'>Dallas/Fort Worth Table Tennis</Header>
                     <Button
                         fluid
-                        onClick={this.scrollToContent}>
-                        <Button.Content visible>
-                            Get to know me <i className='fa fa-caret-down' />
-                        </Button.Content>
+                        className='hero-button'>
+                        Become a part of something great <i className='fa fa-caret-down' />
                     </Button>
                 </Segment>
             </div>
