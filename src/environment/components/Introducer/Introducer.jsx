@@ -20,11 +20,14 @@ export default class Introducer extends Component {
                     <Header
                         as='h1'
                         textAlign='center'>Dallas/Fort Worth Table Tennis</Header>
-                    <Button
-                        fluid
-                        className='hero-button'>
-                        Become a part of something great <i className='fa fa-caret-down' />
-                    </Button>
+                    <a href='#membership'>
+                        <Button
+                            primary
+                            fluid
+                            className='hero-button'>
+                            Become a part of something great <i className='fa fa-caret-down' />
+                        </Button>
+                    </a>
                 </Segment>
             </div>
         );

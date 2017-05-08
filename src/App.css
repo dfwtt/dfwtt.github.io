@@ -12,7 +12,6 @@
 .App .ScreenSegment h2 {
     text-transform: uppercase;
     letter-spacing: 0.22rem;
-    padding-bottom: 2rem;
 }
 
 .App button {
@@ -23,6 +22,11 @@
 .App th {
     text-transform: uppercase !important;
     letter-spacing: 0.16rem;
+}
+
+.App .ScreenSegment p {
+    line-height: 2rem;
+    padding-botom: 2rem;
 }
 
 .App p {

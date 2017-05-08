@@ -11,7 +11,7 @@ export default class Footer extends Component {
                         <Grid.Row>
                             <Grid.Column>
                                 <a href='#top'>
-                                    <Button fluid>Back to top <i className='fa fa-chevron-up' /></Button>
+                                    <Button primary fluid>Back to top <i className='fa fa-chevron-up' /></Button>
                                 </a>
                             </Grid.Column>
                             <Grid.Column>

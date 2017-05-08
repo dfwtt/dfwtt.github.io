@@ -5,7 +5,7 @@ import './Membership.css';
 export default class Membership extends Component {
     render () {
         return (
-            <div id='membership' className='Coaching ScreenSegment'>
+            <div id='membership' className='Membership ScreenSegment'>
                 <Container>
                     <Segment raised>
                         <Header as='h2'>

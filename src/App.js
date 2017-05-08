@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Divider } from 'semantic-ui-react';
 import './App.css';
 import Introducer from './environment/components/Introducer/Introducer';
 import News from './environment/components/News/News';
@@ -15,13 +14,9 @@ class App extends Component {
           <div id='top' />
           <Introducer />
           <News />
-          <Divider />
           <Locations />
-          <Divider />
           <Coaching />
-          <Divider />
           <Membership/>
-          <Divider />
           <Footer />
       </div>
     );
