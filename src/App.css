@@ -1,3 +1,25 @@
 .App {
     background: url('/images/texture.png');
 }
+
+.App .ScreenSegment {
+    min-width: 100vw;
+    min-height: 100vh;
+    padding-top: 5%;
+}
+
+.App .ScreenSegment h2 {
+    text-transform: uppercase;
+    letter-spacing: 0.22rem;
+    padding-bottom: 2rem;
+}
+
+.App button {
+    text-transform: uppercase !important;
+    letter-spacing: 0.16rem;
+}
+
+.App p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+}

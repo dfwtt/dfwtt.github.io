@@ -9,8 +9,6 @@ export default class Introducer extends Component {
     }
 
     render () {
-        const { fullName, jobTitle } = this.props;
-
         return (
             <div className='Introducer'>
                 <Segment
