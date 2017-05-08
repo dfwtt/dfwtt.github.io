@@ -6,6 +6,7 @@
     min-width: 100vw;
     min-height: 100vh;
     padding-top: 5%;
+    overflow-x: hidden !important;
 }
 
 .App .ScreenSegment h2 {
@@ -15,6 +16,11 @@
 }
 
 .App button {
+    text-transform: uppercase !important;
+    letter-spacing: 0.16rem;
+}
+
+.App th {
     text-transform: uppercase !important;
     letter-spacing: 0.16rem;
 }
