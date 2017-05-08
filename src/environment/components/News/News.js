@@ -5,11 +5,11 @@ import './News.css';
 export default class News extends Component {
     render () {
         return (
-            <div className='News ScreenSegment'>
+            <div id='news' className='News ScreenSegment'>
                 <Container>
                     <Segment raised>
                         <Header as='h2'>
-                            News
+                            Current News
                             <Button floated='right' compact>More news <i className='fa fa-chevron-right' /></Button>
                         </Header>
                         <Grid columns={3}>
