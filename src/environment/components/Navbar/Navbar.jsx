@@ -6,11 +6,10 @@ export default class Navbar extends Component {
     render () {
         const { active } = this.props;
         return (
-            <Menu className='Navbar' as='header' size='huge' pointing fixed='top' fluid secondary>
+            <Menu className='Navbar' fixed='top' stackable>
                 <Menu.Item active={active === null} href='#top'>
                     <img src='/images/dfwtt.gif'/>
                 </Menu.Item>
-                <Menu.Menu position='right'>
                     <Menu.Item active={active === 'news'} href='#news'>
                         News
                     </Menu.Item>
@@ -23,7 +22,6 @@ export default class Navbar extends Component {
                     <Menu.Item active={active === 'membership'} href='#membership'>
                         Membership
                     </Menu.Item>
-                </Menu.Menu>
             </Menu>
         );
     }
