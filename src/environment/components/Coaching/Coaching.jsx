@@ -5,7 +5,7 @@ import './Coaching.css';
 export default class Coaching extends Component {
     render () {
         return (
-            <div id='coaching' className='Coaching ScreenSegment'>
+            <div className='Coaching ScreenSegment'>
                 <Container>
                     <Segment raised>
                         <Header as='h2'>

@@ -5,7 +5,7 @@ import './News.css';
 export default class News extends Component {
     render () {
         return (
-            <div id='news' className='News ScreenSegment'>
+            <div className='News ScreenSegment'>
                 <Container>
                     <Segment raised>
                         <Header as='h2'>

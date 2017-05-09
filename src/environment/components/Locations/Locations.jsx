@@ -5,7 +5,7 @@ import './Locations.css';
 export default class Locations extends Component {
     render () {
         return (
-            <div id='locations' className='Locations ScreenSegment'>
+            <div className='Locations ScreenSegment'>
                 <Container>
                     <Segment raised>
                         <Header as='h2'>
