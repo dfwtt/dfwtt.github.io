@@ -12,6 +12,7 @@ export default class Membership extends Component {
                             Membership
                             <Button floated='right' compact>View perks <i className='fa fa-chevron-right' /></Button>
                         </Header>
+                        <p>By becoming a member of DFWTT, you are making an investment in both yourself as a player, as well as an organization that provides activities for people of all ages and walks of life.</p>
                         <Table celled textAlign='center'>
                             <Table.Header>
                                 <Table.Row>

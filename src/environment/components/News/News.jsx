@@ -15,7 +15,7 @@ export default class News extends Component {
                         <Grid columns={3}>
                             <Grid.Row>
                                 <Grid.Column>
-                                    <Image size='medium' src='http://placehold.it/300x300/FAFAFA' />
+                                    <Image size='medium' src='/images/2017springopen.jpg' href='/images/2017springopen.jpg' />
                                 </Grid.Column>
                                 <Grid.Column width={10}>
                                     <Header as='h3'>2017 DFWTT Spring Open</Header>
