@@ -11,3 +11,6 @@
 .Membership p {
     max-width: 70%;
 }
+.Membership .listitem {
+    margin-bottom: 2rem !important;
+}

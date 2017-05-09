@@ -10,9 +10,15 @@ export default class Membership extends Component {
                     <Segment raised>
                         <Header as='h2'>
                             Membership
-                            <Button floated='right' compact>View perks <i className='fa fa-chevron-right' /></Button>
                         </Header>
                         <p>By becoming a member of DFWTT, you are making an investment in both yourself as a player, as well as an organization that provides activities for people of all ages and walks of life.</p>
+                        <Header as='h4'>Perks include:</Header>
+                        <List divided>
+                            <List.Item>Professional coaching available to take you to where you want to go.</List.Item>
+                            <List.Item>Officially sanctioned tournaments, legitimized via USATT.</List.Item>
+                            <List.Item>Leagues and classes available for all ages.</List.Item>
+                            <List.Item>All ability levels are encouraged to participate.</List.Item>
+                        </List>
                         <Table celled textAlign='center'>
                             <Table.Header>
                                 <Table.Row>
