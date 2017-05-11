@@ -221,6 +221,33 @@ class App extends Component {
           }
       ];
 
+      const MEMBERSHIP_TITLE = 'Join today!';
+      const MEMBERSHIP_SUMMARY = 'By becoming a member of DFWTT, you are making an investment in both yourself as a player, as well as an organization that provides activities for people of all ages and walks of life.';
+      const PERKS = [
+          'Professional coaching available to take you to where you want to go.',
+          'Officially sanctioned tournaments, legitimized via USATT.',
+          'Leagues and classes available for all ages.',
+          'All ability levels are encouraged to participate.',
+      ];
+      const MEMBERSHIP_PACKAGES = [
+          {
+            single: {
+              value: 'single',
+              label: 'One individual',
+              prices: [20, 55, 90, 150]
+          },
+            family_two: {
+              value: 'family',
+              label: 'Two individuals',
+              prices: [35, 85, 135, 220]
+          },
+            family_three: {
+              value: 'family',
+              label: 'Three individuals',
+              prices: [45, 110, 180, 270]
+          },
+        }
+      ];
     return (
       <div className='App'>
           <div id='top' />
@@ -249,7 +276,11 @@ class App extends Component {
             coaching={COACHING}
             instructors={INSTRUCTORS} />
           <div id='membership' />
-          <Membership/>
+          <Membership
+            title={MEMBERSHIP_TITLE}
+            summary={MEMBERSHIP_SUMMARY}
+            perks={PERKS}
+            packages={MEMBERSHIP_PACKAGES} />
           <Footer />
       </div>
     );

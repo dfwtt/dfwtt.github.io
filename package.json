@@ -2,7 +2,7 @@
   "name": "connor-bryan-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ConnorBryan.github.io/",
+  "homepage": "https://dfwtt.github.io/",
   "dependencies": {
     "font-awesome": "^4.7.0",
     "numeral": "^2.0.6",
@@ -23,8 +23,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "yarn destroy && yarn build && yarn move",
     "destroy": "rm -rf images && rm -rf static && rm -rf index.html && rm -rf asset-manifest.json && rm -rf favicon.ico",
-    "move": "cp -r build/images images && cp -r build/static static && cp -r build/index.html index.html && cp -r build/asset-manifest.json asset-manifest.json && cp -r build/favicon.ico favicon.ico && rm -rf build"
+    "move": "cp -r build/images images && cp -r build/static static && cp -r build/index.html index.html && cp -r build/asset-manifest.json asset-manifest.json && cp -r build/favicon.ico favicon.ico && rm -rf build",
+    "deploy": "yarn destroy && yarn build && yarn move"
   }
 }
