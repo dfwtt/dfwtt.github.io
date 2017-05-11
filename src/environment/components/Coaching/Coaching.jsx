@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import numeral from 'numeral';
 import { Divider, Container, Segment, Header, Card, Item, List, Message, Icon, Statistic } from 'semantic-ui-react';
+import { shouldBeCollapsed } from '../../shared/mobile';
 import './Coaching.css';
 
 export default class Coaching extends Component {
     render () {
         const { title, summary, coaching, instructors } = this.props;
+        const centered = shouldBeCollapsed();
         return (
             <div className='Coaching ScreenSegment'>
                 <Container>
@@ -15,6 +17,7 @@ export default class Coaching extends Component {
                         <Card.Group>
                             {coaching.map((offer, index) => (
                                 <Card
+                                    fluid={centered}
                                     color={['blue', 'violet', 'purple'][index]}
                                     style={{ textAlign: 'center' }}>
                                     <Card.Content>
@@ -33,15 +36,17 @@ export default class Coaching extends Component {
                                                     <Divider />
                                                 </div>
                                             )
-                                            : (
-                                                <div>
-                                                    <Statistic>
-                                                        <Statistic.Value>&nbsp;</Statistic.Value>
-                                                        <Statistic.Label>&nbsp;</Statistic.Label>
-                                                    </Statistic>
-                                                    <Divider />
-                                                </div>
-                                            ) }
+                                            : shouldBeCollapsed()
+                                                ? null
+                                                : (
+                                                    <div>
+                                                        <Statistic>
+                                                            <Statistic.Value>&nbsp;</Statistic.Value>
+                                                            <Statistic.Label>&nbsp;</Statistic.Label>
+                                                        </Statistic>
+                                                        <Divider />
+                                                    </div>
+                                                )}
                                         <Statistic>
                                             <Statistic.Label>Best deal</Statistic.Label>
                                             <Statistic.Value>{numeral(offer.four).format('$0.00')}</Statistic.Value>
