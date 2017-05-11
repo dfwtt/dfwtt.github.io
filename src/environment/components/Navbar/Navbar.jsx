@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Menu, Segment, Sidebar } from 'semantic-ui-react';
+import { Menu, Sidebar, Image } from 'semantic-ui-react';
 import './Navbar.css';
 
 const MOBILE_SCREEN_SIZE = 680;
@@ -7,10 +7,7 @@ const MOBILE_SCREEN_SIZE = 680;
 export default class Navbar extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            isCollapsed: false,
-            sidebarShowing: false
-        };
+        this.state = { isCollapsed: false, sidebarShowing: false };
         this.adjustDisplay = this.adjustDisplay.bind(this);
         this.toggleSidebar = this.toggleSidebar.bind(this);
         this.setResizeListener();
@@ -46,14 +43,7 @@ export default class Navbar extends Component {
 
     render () {
         const { isCollapsed, sidebarShowing } = this.state;
-        const { active } = this.props;
-        const LOGO = '/images/dfwtt.gif';
-        const PAGE_LINKS = [
-            { active: 'news', href: '#news', text: 'News' },
-            { active: 'locations', href: '#locations', text: 'Locations' },
-            { active: 'coaching', href: '#coaching', text: 'Coaching' },
-            { active: 'membership', href: '#membership', text: 'Membership' }
-        ];
+        const { active, logo, pageLinks } = this.props;
         return (
             <div>
                 <Menu
@@ -62,7 +52,9 @@ export default class Navbar extends Component {
                     <Menu.Item
                         active={active === null}
                         href='#top'>
-                        <img src={LOGO} />
+                        <Image
+                            src={logo}
+                            alt='Company logo'/>
                     </Menu.Item>
                     {isCollapsed
                             ? (
@@ -71,9 +63,8 @@ export default class Navbar extends Component {
                                     position='right'>
                                     <i className='fa fa-bars' />
                                 </Menu.Item>
-
                             )
-                            : this.generateLinks(PAGE_LINKS, active)}
+                            : this.generateLinks(pageLinks, active)}
                 </Menu>
                 <Sidebar
                     as={Menu}
@@ -86,7 +77,7 @@ export default class Navbar extends Component {
                     <Menu.Item onClick={this.toggleSidebar}>
                         <i className='fa fa-close' /> Close
                     </Menu.Item>
-                    {this.generateLinks(PAGE_LINKS, active)}
+                    {this.generateLinks(pageLinks, active)}
                 </Sidebar>
             </div>
         );

@@ -42,10 +42,20 @@ class App extends Component {
 
   render() {
     const { activeScreenSegment } = this.state;
+      const LOGO = '/images/dfwtt.gif';
+      const PAGE_LINKS = [
+          { active: 'news', href: '#news', text: 'News' },
+          { active: 'locations', href: '#locations', text: 'Locations' },
+          { active: 'coaching', href: '#coaching', text: 'Coaching' },
+          { active: 'membership', href: '#membership', text: 'Membership' }
+      ];
     return (
       <div className='App'>
           <div id='top' />
-          <Navbar active={activeScreenSegment} />
+          <Navbar
+              logo={LOGO}
+              pageLinks={PAGE_LINKS}
+              active={activeScreenSegment} />
           <Introducer />
           <div id='news' />
           <News />

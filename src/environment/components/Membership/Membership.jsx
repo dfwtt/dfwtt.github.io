@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Segment, Header, Grid, Image, Button, Table, List, Message, Icon, Statistic } from 'semantic-ui-react';
+import { Container, Segment, Header, Table, List, Message, Icon, Statistic } from 'semantic-ui-react';
 import './Membership.css';
 
 export default class Membership extends Component {
