@@ -50,6 +50,13 @@ class App extends Component {
           { active: 'membership', href: '#membership', text: 'Membership' }
       ];
 
+      const SITE_HEADER = 'Dallas/Fort Worth Table Tennis';
+      const TAGLINE = 'Become a part of something great';
+
+      const NEWS_TITLE = 'Current News';
+      const CURRENT_TITLE =  '2017 DFWTT Spring Open';
+      const CURRENT_DESCRIPTION = 'DFWTT hosted its yearly Spring Open on April 29th. The tournament was held in Dallas at the T Bar M Racquet Club and featured both USATT sanctioned and non-sanctioned events. There were 99 players who competed in these events. Thanks to everyone who attended the tournament.';
+
       const LOCATIONS_TITLE = 'Locations';
       const LOCATIONS_SUMMARY = 'DFWTT regularly meets up at three superb locations in the northern DFW metroplex.';
       const LOCATIONS = [
@@ -72,6 +79,7 @@ class App extends Component {
               directions: 'https://www.google.com/maps/place/6060+Dilbeck+Ln,+Dallas,+TX+75240/@32.9292,-96.8036111,17z/data=!3m1!4b1!4m5!3m4!1s0x864c20fa8be63af1:0x96164675e63cb247!8m2!3d32.9292!4d-96.8014224?hl=en',
           }
       ];
+      const NOTICE = 'Jewish Community Center: Use upper level parking lots only and use the Health & Fitness Complex entrance door located on North side of building. Sign in at front desk.';
     return (
       <div className='App'>
           <div id='top' />
@@ -79,14 +87,20 @@ class App extends Component {
               logo={LOGO}
               pageLinks={PAGE_LINKS}
               active={activeScreenSegment} />
-          <Introducer />
+          <Introducer
+              siteHeader={SITE_HEADER}
+              tagline={TAGLINE} />
           <div id='news' />
-          <News />
+          <News
+            title={NEWS_TITLE}
+            currentTitle={CURRENT_TITLE}
+            currentDescription={CURRENT_DESCRIPTION}/>
           <div id='locations' />
           <Locations
               title={LOCATIONS_TITLE}
               summary={LOCATIONS_SUMMARY}
-              locations={LOCATIONS} />
+              locations={LOCATIONS}
+              notice={NOTICE} />
           <div id='coaching' />
           <Coaching />
           <div id='membership' />

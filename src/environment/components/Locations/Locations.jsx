@@ -5,7 +5,7 @@ import './Locations.css';
 
 export default class Locations extends Component {
     render () {
-        const { summary, locations } = this.props;
+        const { summary, locations, notice } = this.props;
         const fluid = shouldBeCollapsed();
         return (
             <div className='Locations ScreenSegment'>
@@ -33,6 +33,12 @@ export default class Locations extends Component {
                                 </Card>
                             ))}
                         </Card.Group>
+                        <Message
+                            textAlign='right'
+                            attached='top'
+                            negative>
+                            <Message.Content><i className="fa fa-info" /> {notice}</Message.Content>
+                        </Message>
                         <Message
                             textAlign='right'
                             attached='bottom'>

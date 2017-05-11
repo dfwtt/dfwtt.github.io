@@ -9,6 +9,7 @@ export default class Introducer extends Component {
     }
 
     render () {
+        const { siteHeader, tagline } = this.props;
         return (
             <div className='Introducer'>
                 <Segment
@@ -19,13 +20,13 @@ export default class Introducer extends Component {
                         src='/images/dfwtt.gif' />
                     <Header
                         as='h1'
-                        textAlign='center'>Dallas/Fort Worth Table Tennis</Header>
+                        textAlign='center'>{siteHeader}</Header>
                     <a href='#membership'>
                         <Button
                             primary
                             fluid
                             className='hero-button'>
-                            Become a part of something great <i className='fa fa-caret-down' />
+                            {tagline} <i className='fa fa-caret-down' />
                         </Button>
                     </a>
                 </Segment>
