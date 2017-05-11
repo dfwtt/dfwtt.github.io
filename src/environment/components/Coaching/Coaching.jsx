@@ -28,7 +28,7 @@ export default class Coaching extends Component {
                                     <Button onClick={() => this.toggleActiveSegment()} floated='right' compact>View instructors <i className='fa fa-chevron-right' /></Button>
                                 </Header>
                                 <p>If you're serious about table tennis, and taking it to the next level is on your todo list, coaching is your best bet. Interact with some of the best players DFW has to offer and learn something new.</p>
-                                <Table celled textAlign='center'>
+                                <Table stackable celled textAlign='center'>
                                     <Table.Header>
                                         <Table.Row>
                                             <Table.HeaderCell></Table.HeaderCell>
