@@ -21,6 +21,14 @@ export default class Navbar extends Component {
 
     toggleSidebar = () => this.setState({ sidebarShowing: !this.state.sidebarShowing });
 
+    generateLinks = (links, active) => links.map(link => (
+        <Menu.Item
+            active={active === link.active}
+            href={link.href}>
+            {link.text}
+        </Menu.Item>
+    ));
+
     adjustDisplay() {
         const { isCollapsed, sidebarShowing } = this.state;
         const mobileSized = this.getBrowserWidth() < MOBILE_SCREEN_SIZE;
@@ -29,16 +37,6 @@ export default class Navbar extends Component {
             this.setCollapsed(false);
             if (sidebarShowing) this.toggleSidebar();
         }
-    }
-
-    generateLinks(links, active) {
-        return links.map(link => (
-            <Menu.Item
-                active={active === link.active}
-                href={link.href}>
-                {link.text}
-            </Menu.Item>
-        ));
     }
 
     render () {
@@ -54,17 +52,22 @@ export default class Navbar extends Component {
                         href='#top'>
                         <Image
                             src={logo}
-                            alt='Company logo'/>
+                            size='tiny'
+                            alt='Company logo' />
                     </Menu.Item>
                     {isCollapsed
-                            ? (
-                                <Menu.Item
-                                    onClick={this.toggleSidebar}
-                                    position='right'>
-                                    <i className='fa fa-bars' />
-                                </Menu.Item>
-                            )
-                            : this.generateLinks(pageLinks, active)}
+                        ? (
+                            <Menu.Item
+                                onClick={this.toggleSidebar}
+                                position='right'>
+                                <i className='fa fa-bars' />
+                            </Menu.Item>
+                        )
+                        : (
+                            <Menu.Menu position='right'>
+                                {this.generateLinks(pageLinks, active)}
+                            </Menu.Menu>
+                        )}
                 </Menu>
                 <Sidebar
                     as={Menu}
