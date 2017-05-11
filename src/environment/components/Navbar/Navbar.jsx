@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
 import { Menu, Sidebar, Image } from 'semantic-ui-react';
+import { shouldBeCollapsed } from '../../shared/mobile';
 import './Navbar.css';
-
-const MOBILE_SCREEN_SIZE = 680;
 
 export default class Navbar extends Component {
     constructor(props) {
         super(props);
-        this.state = { isCollapsed: false, sidebarShowing: false };
+        this.state = { isCollapsed: shouldBeCollapsed(), sidebarShowing: false };
         this.adjustDisplay = this.adjustDisplay.bind(this);
         this.toggleSidebar = this.toggleSidebar.bind(this);
         this.setResizeListener();
     }
-
-    getBrowserWidth = () => window.innerWidth;
 
     setResizeListener = () => window.addEventListener('resize', this.adjustDisplay);
 
@@ -23,6 +20,8 @@ export default class Navbar extends Component {
 
     generateLinks = (links, active) => links.map(link => (
         <Menu.Item
+            key={link.text}
+            onClick={() => this.state.sidebarShowing && this.toggleSidebar()}
             active={active === link.active}
             href={link.href}>
             {link.text}
@@ -31,9 +30,8 @@ export default class Navbar extends Component {
 
     adjustDisplay() {
         const { isCollapsed, sidebarShowing } = this.state;
-        const mobileSized = this.getBrowserWidth() < MOBILE_SCREEN_SIZE;
-        if (mobileSized && !isCollapsed) this.setCollapsed(true);
-        if (!mobileSized && isCollapsed) {
+        if (shouldBeCollapsed() && !isCollapsed) this.setCollapsed(true);
+        if (!shouldBeCollapsed() && isCollapsed) {
             this.setCollapsed(false);
             if (sidebarShowing) this.toggleSidebar();
         }
