@@ -6,3 +6,8 @@
 .Navbar a {
     text-transform: uppercase !important;
 }
+
+.mobile-menu .item {
+    text-transform: uppercase !important;
+    letter-spacing: 0.22rem !important;
+}
