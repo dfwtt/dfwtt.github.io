@@ -5,6 +5,7 @@
   "homepage": "https://ConnorBryan.github.io/",
   "dependencies": {
     "font-awesome": "^4.7.0",
+    "numeral": "^2.0.6",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "semantic-ui-react": "^0.68.3",
@@ -22,9 +23,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "yarn destroy && yarn build && yarn move",
     "destroy": "rm -rf images && rm -rf static && rm -rf index.html && rm -rf asset-manifest.json && rm -rf favicon.ico",
-    "move": "cp -r build/images images && cp -r build/static static && cp -r build/index.html index.html && cp -r build/asset-manifest.json asset-manifest.json && cp -r build/favicon.ico favicon.ico && rm -rf build",
-    "deploy": "yarn destroy && yarn build && yarn move"
+    "move": "cp -r build/images images && cp -r build/static static && cp -r build/index.html index.html && cp -r build/asset-manifest.json asset-manifest.json && cp -r build/favicon.ico favicon.ico && rm -rf build"
   }
 }
