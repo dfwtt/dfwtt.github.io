@@ -49,6 +49,29 @@ class App extends Component {
           { active: 'coaching', href: '#coaching', text: 'Coaching' },
           { active: 'membership', href: '#membership', text: 'Membership' }
       ];
+
+      const LOCATIONS_TITLE = 'Locations';
+      const LOCATIONS_SUMMARY = 'DFWTT regularly meets up at three superb locations in the northern DFW metroplex.';
+      const LOCATIONS = [
+          {
+              image: '/images/cimarron.jpg',
+              name: 'Cimarron Recreation Center',
+              address: '265 Red River Trail, Irving, TX 75063',
+              directions: 'http://maps.google.com/maps?um=1&tab=wl&hl=en&q=265%20Red%20River%20Trail%20TX',
+          },
+          {
+              image: '/images/jcc.jpg',
+              name: 'Jewish Community Center',
+              address: '7900 Northaven Road, Dallas, TX 75230',
+              directions: 'http://maps.google.com/maps?f=q&hl=en&geocode=&q=7900+Northaven+Road,+Dallas+75230&sll=37.0625,-95.677068&sspn=45.014453,81.738281&ie=UTF8&z=16&iwloc=addr&om=1',
+          },
+          {
+              image: '/images/tbarm.jpg',
+              name: 'T Bar M Racquet Club',
+              address: '6060 Dilbeck Ln, Dallas, TX 75240',
+              directions: 'https://www.google.com/maps/place/6060+Dilbeck+Ln,+Dallas,+TX+75240/@32.9292,-96.8036111,17z/data=!3m1!4b1!4m5!3m4!1s0x864c20fa8be63af1:0x96164675e63cb247!8m2!3d32.9292!4d-96.8014224?hl=en',
+          }
+      ];
     return (
       <div className='App'>
           <div id='top' />
@@ -60,7 +83,10 @@ class App extends Component {
           <div id='news' />
           <News />
           <div id='locations' />
-          <Locations />
+          <Locations
+              title={LOCATIONS_TITLE}
+              summary={LOCATIONS_SUMMARY}
+              locations={LOCATIONS} />
           <div id='coaching' />
           <Coaching />
           <div id='membership' />
